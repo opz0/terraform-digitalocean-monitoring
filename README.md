@@ -29,7 +29,7 @@ module "uptime-alert" {
   alert_type  = ["down_global"]
   period      = ["2m", "3m"]
   comparison  = ["less_than"]
-  
+
   notifications = [
     {
       email = ["kumawatmanoj553@gmail.com"]
@@ -57,7 +57,7 @@ module "uptime-alert" {
   alert_type  = ["down_global"]
   period      = ["2m"]
   comparison  = ["less_than"]
-  
+
   notifications = [
     {
       email = ["kumawatmanoj553@gmail.com"]
