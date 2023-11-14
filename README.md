@@ -32,7 +32,7 @@ module "uptime-alert" {
 
   notifications = [
     {
-      email = ["kumawatmanoj553@gmail.com"]
+      email = ["example@gmail.com"]
       slack = [
         {
           channel = "testing"
@@ -60,7 +60,7 @@ module "uptime-alert" {
 
   notifications = [
     {
-      email = ["kumawatmanoj553@gmail.com"]
+      email = ["example@gmail.com"]
       slack = [
         {
           channel = "testing"
