@@ -7,13 +7,13 @@ variable "name" {
 variable "environment" {
   type        = string
   default     = ""
-  description = "Environment (e.g. `opzO`, `dev`, `staging`)."
+  description = "Environment (e.g. `cypik`, `dev`, `staging`)."
 }
 
 variable "managedby" {
   type        = string
   default     = "baldev"
-  description = "ManagedBy, eg 'terraform-opzO'"
+  description = "ManagedBy, eg 'terraform-cypik'"
 }
 
 variable "label_order" {

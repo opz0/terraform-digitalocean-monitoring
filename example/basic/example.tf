@@ -6,7 +6,7 @@ provider "digitalocean" {
 ## alert module call.
 ##------------------------------------------------
 module "uptime-alert" {
-  source      = "./../.."
+  source      = "./../../"
   name        = "app"
   environment = "test"
   target_url  = ["http://test.do.google.ca/"]
