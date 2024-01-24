@@ -1,5 +1,5 @@
 module "labels" {
-  source      = "git::https://github.com/cypik/terraform-digitalocean-labels.git?ref=v1.0.0"
+  source      = "cypik/labels/digitalocean"
   name        = var.name
   environment = var.environment
   managedby   = var.managedby
