@@ -1,6 +1,7 @@
 # Terraform-digitalocean-monitoring
 # Terraform DigitalOcean cloud monitoring Module
 
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -22,7 +23,7 @@ You can use this module in your Terraform configuration like this:
 ```hcl
 module "uptime-alert" {
   source      = "cypik/uptime-alert/digitalocean"
-  version     = "1.0.1" 
+  version     = "1.0.1"
   name        = "app"
   environment = "test"
   target_url  = ["http://test.do.google.ca/", "https://test2.do.google.ca/"]
@@ -105,7 +106,7 @@ This Terraform module is provided under the **MIT** License. Please see the [LIC
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/cypik/terraform-digitalocean-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/digitalocean | 1.0.1 |
 
 ## Resources
 

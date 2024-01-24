@@ -1,5 +1,6 @@
 module "labels" {
   source      = "cypik/labels/digitalocean"
+  version     = "1.0.1"
   name        = var.name
   environment = var.environment
   managedby   = var.managedby
