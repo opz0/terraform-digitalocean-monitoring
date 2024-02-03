@@ -22,7 +22,7 @@ You can use this module in your Terraform configuration like this:
 
 ```hcl
 module "uptime-alert" {
-  source      = "cypik/uptime-alert/digitalocean"
+  source      = "cypik/monitoring/digitalocean"
   version     = "1.0.1"
   name        = "app"
   environment = "test"
@@ -51,7 +51,7 @@ You can use this module in your Terraform configuration like this:
 
 ```hcl
 module "uptime-alert" {
-  source      = "cypik/uptime-alert/digitalocean"
+  source      = "cypik/monitoring/digitalocean"
   version     = "1.0.1"
   name        = "app"
   environment = "test"
