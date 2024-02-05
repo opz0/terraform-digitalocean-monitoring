@@ -7,19 +7,19 @@ variable "name" {
 variable "environment" {
   type        = string
   default     = ""
-  description = "Environment (e.g. `opzO`, `dev`, `staging`)."
+  description = "Environment (e.g. `cypik`, `dev`, `staging`)."
 }
 
 variable "managedby" {
   type        = string
-  default     = "baldev"
-  description = "ManagedBy, eg 'terraform-opzO'"
+  default     = "cypik"
+  description = "ManagedBy, eg 'terraform-cypik'"
 }
 
 variable "label_order" {
   type        = list(any)
   default     = []
-  description = "Label order, e.g. `name`."
+  description = "Label order, e.g. `cypik`."
 }
 
 variable "enable" {
