@@ -82,4 +82,9 @@ variable "notifications" {
   description = "The notification settings for a trigger alert."
 }
 
+variable "number_of_tags" {
+  description = "The number of tags to create."
+  type        = number
+  default     = 1
+}
 

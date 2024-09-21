@@ -1,13 +1,11 @@
 module "labels" {
   source      = "cypik/labels/digitalocean"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = var.name
   environment = var.environment
   managedby   = var.managedby
   label_order = var.label_order
 }
-
-
 
 resource "digitalocean_uptime_check" "main" {
   count   = var.enable ? length(var.target_url) : 0
@@ -17,8 +15,6 @@ resource "digitalocean_uptime_check" "main" {
   regions = var.regions
   enabled = var.enabled
 }
-
-
 
 resource "digitalocean_uptime_alert" "main" {
   count      = var.enable ? length(var.target_url) : 0
@@ -42,4 +38,9 @@ resource "digitalocean_uptime_alert" "main" {
       }
     }
   }
+}
+
+resource "digitalocean_tag" "id" {
+  count = var.number_of_tags
+  name  = "your-tag-name-${count.index}"
 }

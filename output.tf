@@ -1,6 +1,5 @@
 output "id" {
-  value       = join("", digitalocean_uptime_alert.main[*].id)
-  description = "The name of the monitoring."
+  value = digitalocean_tag.id[0].id
 }
 
 output "id_check" {
