@@ -6,10 +6,10 @@ provider "digitalocean" {
 ## alert module call.
 ##------------------------------------------------
 module "uptime-alert" {
-  source      = "./../.."
+  source      = "./../../"
   name        = "app"
   environment = "test"
-  target_url  = ["http://test.do.google.ca/", "https://test2.do.google.ca/"]
+  target_url  = ["https://www.google.com/", "https://www.google.com/"]
   type        = ["http", "https"]
   alert_type  = ["down_global"]
   period      = ["2m", "3m"]

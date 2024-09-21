@@ -23,10 +23,10 @@ You can use this module in your Terraform configuration like this:
 ```hcl
 module "uptime-alert" {
   source      = "cypik/monitoring/digitalocean"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = "app"
   environment = "test"
-  target_url  = ["http://test.do.google.ca/", "https://test2.do.google.ca/"]
+  target_url  = ["https://www.google.com/", "https://www.google.com/"]
   type        = ["http", "https"]
   alert_type  = ["down_global"]
   period      = ["2m", "3m"]
@@ -52,7 +52,7 @@ You can use this module in your Terraform configuration like this:
 ```hcl
 module "uptime-alert" {
   source      = "cypik/monitoring/digitalocean"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = "app"
   environment = "test"
   target_url  = ["http://test.do.google.ca/"]
@@ -93,25 +93,26 @@ This Terraform module is provided under the **MIT** License. Please see the [LIC
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.6 |
-| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.34.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.5 |
+| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.40.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.34.1 |
+| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.40.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/digitalocean | 1.0.1 |
+| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/digitalocean | 1.0.2 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
+| [digitalocean_tag.id](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/tag) | resource |
 | [digitalocean_uptime_alert.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/uptime_alert) | resource |
 | [digitalocean_uptime_check.main](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/uptime_check) | resource |
 
@@ -128,6 +129,7 @@ This Terraform module is provided under the **MIT** License. Please see the [LIC
 | <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'terraform-cypik' | `string` | `"cypik"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_notifications"></a> [notifications](#input\_notifications) | The notification settings for a trigger alert. | `list(any)` | `[]` | no |
+| <a name="input_number_of_tags"></a> [number\_of\_tags](#input\_number\_of\_tags) | The number of tags to create. | `number` | `1` | no |
 | <a name="input_period"></a> [period](#input\_period) | Period of time the threshold must be exceeded to trigger the alert. Must be one of 2m, 3m, 5m, 10m, 15m, 30m or 1h. | `list(string)` | <pre>[<br>  "2m"<br>]</pre> | no |
 | <a name="input_regions"></a> [regions](#input\_regions) | An array containing the selected regions to perform healthchecks from: 'us\_east', 'us\_west', 'eu\_west', 'se\_asia'' | `list(string)` | <pre>[<br>  "us_east",<br>  "us_west",<br>  "eu_west",<br>  "se_asia"<br>]</pre> | no |
 | <a name="input_target_url"></a> [target\_url](#input\_target\_url) | The endpoint to perform healthchecks on. | `list(any)` | `[]` | no |
@@ -138,6 +140,6 @@ This Terraform module is provided under the **MIT** License. Please see the [LIC
 
 | Name | Description |
 |------|-------------|
-| <a name="output_id"></a> [id](#output\_id) | The name of the monitoring. |
+| <a name="output_id"></a> [id](#output\_id) | n/a |
 | <a name="output_id_check"></a> [id\_check](#output\_id\_check) | The id of the check. |
 <!-- END_TF_DOCS -->

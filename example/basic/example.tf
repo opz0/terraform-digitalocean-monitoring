@@ -9,7 +9,7 @@ module "uptime-alert" {
   source      = "./../../"
   name        = "app"
   environment = "test"
-  target_url  = ["http://test.do.google.ca/"]
+  target_url  = ["https://www.google.com/"]
   type        = ["http"]
   alert_type  = ["down_global"]
   period      = ["2m"]
